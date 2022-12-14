@@ -230,15 +230,6 @@
 
         };
 	
-	td1: tapdance {
-	    compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_1";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-	    bindings = <&key_repeat>, <&kp RCTRL>;
-
-        };
-	
 	td2: tapdance {
 	    compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_2";
@@ -267,7 +258,7 @@
 		        &kp Y 	&kp C 	&kp L 	&kp M 	&kp K		&kp Z 	&kp F 	&kp U 	&kp COMMA &kp BKSP
 			&kp I 	&kp S 	&hm LALT R &hm LGUI T &kp G	&kp P 	&hm RGUI N &hm RALT E &kp A &kp O
 			&kp Q 	&kp V 	&kp W 	&kp D 	&kp J		&kp B 	&kp H 	&kp SLASH &kp DOT &kp X
-			                  &td0 &lt NUM SPACE		&mo NAV &td1 
+			                  &td0 &lt NUM SPACE		&mo NAV &kp LCTRL
 		    >;
 		};
 
