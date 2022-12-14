@@ -188,7 +188,7 @@
 		
 		combo_dqt {
 			timeout-ms = <50>;
-			key-positions = <8 18>;
+			key-positions = <18 28>;
 			bindings = <&kp DQT>;
 		};
 		
