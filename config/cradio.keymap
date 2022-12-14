@@ -98,7 +98,7 @@
 		
 		combo_minus {
 			timeout-ms = <50>;
-			key-positions = <20 21>;
+			key-positions = <13 23>;
 			bindings = <&kp MINUS>;
 		};
 		
@@ -208,6 +208,12 @@
 			key-positions = <30 31>;
 			bindings = <&mo BT>;
 		};
+		combo_cw {
+			timeout-ms = <50>;
+			key-positions = <1 11>;
+			bindings = <&caps_word>;
+		};
+		
 	};
 
      behaviors {
@@ -220,33 +226,6 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-	
-	td0: tapdance {
-	    compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-	    bindings = <&kp LSHFT>, <&caps_word>;
-
-        };
-	
-	td2: tapdance {
-	    compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_2";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-	    bindings = <&kp PLUS>, <&kp STAR>;
-	    
-	};
-	
-	td3: tapdance {
-	    compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_3";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-	    bindings = <&kp MINUS>, <&kp FSLH>;
-	    
-	};
 
      };
 
@@ -258,14 +237,14 @@
 		        &kp Y 	&kp C 	&kp L 	&kp M 	&kp K		&kp Z 	&kp F 	&kp U 	&kp COMMA &kp BKSP
 			&kp I 	&kp S 	&hm LALT R &hm LGUI T &kp G	&kp P 	&hm RGUI N &hm RALT E &kp A &kp O
 			&kp Q 	&kp V 	&kp W 	&kp D 	&kp J		&kp B 	&kp H 	&kp SLASH &kp DOT &kp X
-			                  &td0 &lt NUM SPACE		&mo NAV &kp LCTRL
+			                  &kp LSHFT &lt NUM SPACE	&mo NAV &kp LCTRL
 		    >;
 		};
 
        		num_layer {
 		    bindings = <
-			&none 	&none 	&kp UP 	&none 	&none			&td2 &kp N7 &kp N8 &kp N9 &kp BKSP
-			&none 	&kp LEFT &kp DOWN &kp RIGHT &none		&td3 &kp N4 &kp N5 &kp N6 &kp RET
+			&none 	&none 	&kp UP 	&none 	&kp FSLH		&kp MINUS &kp N7 &kp N8 &kp N9 &kp BKSP
+			&none 	&kp LEFT &kp DOWN &kp RIGHT &kp STAR		&kp PLUS &kp N4 &kp N5 &kp N6 &kp RET
 			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LSHFT	&none	&kp N1 	&kp N2 	&kp N3 	&none
 						&none	&none			&kp RCTRL &kp N0
 		    >;
