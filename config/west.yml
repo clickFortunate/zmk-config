@@ -1,10 +1,10 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+    - name: clickFortunate
+      url-base: https://github.com/clickFortunate
   projects:
     - name: zmk
-      remote: zmkfirmware
+      remote: clickFortunate
       revision: main
       import: app/west.yml
   self:
