@@ -152,7 +152,7 @@
 		
 		combo_semi {
 			timeout-ms = <50>;
-			key-positions = <8 18>;
+			key-positions = <16 26>;
 			bindings = <&kp SEMI>;
 		};
 		
@@ -176,19 +176,19 @@
 		
 		combo_colon {
 			timeout-ms = <50>;
-			key-positions = <16 26>;
+			key-positions = <17 27>;
 			bindings = <&kp COLON>;
 		};
 		
 		combo_sqt {
 			timeout-ms = <50>;
-			key-positions = <17 27>;
+			key-positions = <23 24>;
 			bindings = <&kp SQT>;
 		};
 		
 		combo_dqt {
 			timeout-ms = <50>;
-			key-positions = <18 28>;
+			key-positions = <25 26>;
 			bindings = <&kp DQT>;
 		};
 		
@@ -200,7 +200,7 @@
 		
 		combo_ret {
             		timeout-ms = <50>;
-            		key-positions = <18 19>;
+            		key-positions = <16 17>;
            		bindings = <&kp ENTER>;
 		};
 		combo_bt {
@@ -213,19 +213,37 @@
 			key-positions = <1 11>;
 			bindings = <&caps_word>;
 		};
+		combo_num1 {
+			timeout-ms = <50>;
+			key-positions = <25 32>;
+			bindings = <&tog NUM>;
+		};
+		
+		combo_lgui {
+			timeout-ms = <50>;
+			key-positions = <11 12 13>;
+			bindings = <&sk LGUI>;
+		};
+		
+		combo_lalt {
+			timeout-ms = <50>;
+			key-positions = <10 11 12>;
+			bindings = <&sk LALT>;
+		};
+		
+		combo_rgui {
+			timeout-ms = <50>;
+			key-positions = <16 17 18>;
+			bindings = <&sk RGUI>;
+		};
+		
+		combo_ralt {
+			timeout-ms = <50>;
+			key-positions = <17 18 19>;
+			bindings = <&sk RALT>;
+		};
 		
 	};
-
-     behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
 
      };
 
@@ -235,17 +253,17 @@
        		base_layer {
 		    bindings = <
 		        &kp Y 	&kp C 	&kp L 	&kp M 	&kp K		&kp Z 	&kp F 	&kp U 	&kp COMMA &kp BKSP
-			&kp I 	&kp S 	&hm LALT R &hm LGUI T &kp G	&kp P 	&hm RGUI N &hm RALT E &kp A &kp O
+			&kp I 	&kp S 	&kp R 	&kp T 	&kp G		&kp P 	&kp N 	&kp E 	&kp A 	&kp O
 			&kp Q 	&kp V 	&kp W 	&kp D 	&kp J		&kp B 	&kp H 	&kp SLASH &kp DOT &kp X
-			                  &kp LSHFT &lt NUM SPACE	&mo NAV &kp LCTRL
+			                  &kp LCTRL &lt NUM SPACE	&kp LSHIFT &mo NAV 
 		    >;
 		};
 
        		num_layer {
 		    bindings = <
-			&none 	&none 	&kp UP 	&none 	&kp FSLH		&kp MINUS &kp N7 &kp N8 &kp N9 &kp BKSP
-			&none 	&kp LEFT &kp DOWN &kp RIGHT &kp STAR		&kp PLUS &kp N4 &kp N5 &kp N6 &kp RET
-			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LSHFT	&none	&kp N1 	&kp N2 	&kp N3 	&none
+			&none 	&none 	&kp UP 	&none 	&kp FSLH		&kp MINUS &kp N7 &kp N8 &kp N9	&kp BKSP
+			&none 	&kp LEFT &kp DOWN &kp RIGHT &kp STAR		&kp PLUS  &kp N4 &kp N5	&kp N6	&kp RET
+			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LSHFT	&kp SPACE &kp N1 &kp N2 &kp N3	&none
 						&none	&none			&kp RCTRL &kp N0
 		    >;
 		};
