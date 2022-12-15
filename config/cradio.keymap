@@ -245,8 +245,6 @@
 		
 	};
 
-     };
-
         keymap {
                 compatible = "zmk,keymap";
                 
