@@ -182,13 +182,13 @@
 		
 		combo_sqt {
 			timeout-ms = <50>;
-			key-positions = <23 24>;
+			key-positions = <25 26>;
 			bindings = <&kp SQT>;
 		};
 		
 		combo_dqt {
 			timeout-ms = <50>;
-			key-positions = <25 26>;
+			key-positions = <23 24>;
 			bindings = <&kp DQT>;
 		};
 		
